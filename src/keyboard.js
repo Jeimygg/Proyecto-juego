@@ -13,8 +13,20 @@ class Keyboard {
     }
   
     createKeyboard() {
-      return this.keys2;
+      const contenedorLetras=document.createElement("div");
+      let contador=0;
+      while (contador<this.keys.length){
+        const button=document.createElement("button");
+        button.textContent=this.keys[contador];
+        button.className="btns"
+        button.addEventListener("click",(e)=>{
+          console.log(e.target.textContent);
+        })
+        contenedorLetras.appendChild(button)
+        contador++;
+      }
+    return contenedorLetras;
     }
   }
   
-  export { Keyboard };
+  export default Keyboard;

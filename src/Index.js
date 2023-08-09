@@ -1,13 +1,22 @@
-import { Keyboard } from "./keyboard";
-import { Panel } from "./Panel.js"
+import Keyboard from "./keyboard.js";
 
-const App = new Keyboard();
-Const Panels = new Panel();
+document.addEventListener("DOMContentLoaded",()=>{
+    const board = new Keyboard();
+    console.log(board.createKeyboard());
+    document.querySelector("#bot").appendChild(board.createKeyboard())
+})
+// import { Panel } from "./Panel.js"
 
 
-console.log (Pannels);
 
-const vector = app.drawKeyboard();
-const palabra = Panel 
+
+// const App = new Keyboard();
+// const Panels = new Panel();
+
+
+// console.log (Pannels);
+
+// const vector = app.drawKeyboard();
+// const palabra = Panel 
 
 
